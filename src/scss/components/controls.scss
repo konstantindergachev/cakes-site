@@ -1,0 +1,40 @@
+.controls {
+  display: flex;
+  position: relative;
+  &__left,
+  &__right {
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      opacity: 0.2;
+    }
+    @include deskfirst(992) {
+      border: 1px solid var(--second-color);
+    }
+    svg {
+      fill: var(--main-color);
+      @include deskfirst(992) {
+        fill: var(--second-color);
+      }
+      @include deskfirst(767) {
+        // width: 20px;
+        // height: 20px;
+      }
+    }
+  }
+  &__left {
+    margin-right: 30px;
+  }
+  &__right {
+    svg {
+      transform: rotateY(180deg);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

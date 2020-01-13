@@ -1,0 +1,41 @@
+.cake__wrapper {
+  margin-bottom: 20px;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "cake-title cake-title " "cake-p cake-img"
+    "cake-ing cake-img";
+  @include deskfirst(992) {
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cake-title" "cake-p""cake-ing" "cake-img";
+  }
+}
+.cake__wrapper h2 {
+  grid-area: cake-title;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.cake__left {
+  p {
+    grid-area: cake-p;
+    text-indent: 15px;
+    text-align: justify;
+  }
+  section {
+    grid-area: cake-ing;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+.cake__right {
+  grid-area: cake-img;
+  justify-self: flex-end;
+  max-width: 350px;
+  img {
+    width: 100%;
+  }
+}

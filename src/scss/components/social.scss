@@ -1,0 +1,23 @@
+.social {
+  position: relative;
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__link {
+    &:hover {
+      svg {
+        transform: translateY(-10px);
+      }
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+    }
+  }
+}

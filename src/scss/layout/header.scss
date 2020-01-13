@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  position: relative;
+
+  @include deskfirst(992) {
+    padding: 0;
+  }
+  &.active {
+    .menu {
+      @include deskfirst(992) {
+        display: initial;
+      }
+    }
+    .hamburger__svg-open {
+      display: none;
+    }
+    .hamburger__svg-closed {
+      display: block;
+    }
+  }
+}

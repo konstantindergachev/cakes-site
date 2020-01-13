@@ -1,0 +1,16 @@
+.hamburger {
+  &__svg-closed {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    display: none;
+    cursor: pointer;
+  }
+  &__svg-open {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    display: initial;
+    cursor: pointer;
+  }
+}

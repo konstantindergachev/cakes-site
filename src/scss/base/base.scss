@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px, 10/16 = 62.5%
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  @include deskfirst(767) {
+    overflow-Y: auto;
+  }
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+svg {
+  width: 24px;
+  height: 24px;
+  fill: #333333;
+}
+
+.container {
+  position: relative;
+  padding: 0 100px;
+  min-height: 100vh;
+  @include deskfirst(992) {
+    padding: 20px 50px;
+  }
+  @include deskfirst(767) {
+    padding: 20px 30px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: var(--second-color);
+    z-index: -2;
+    @include deskfirst(992) {
+      display: none;
+    }
+  }
+  &:after {
+    content: 'Вкусно';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18vw;
+    font-weight: 700;
+    opacity: 0.04;
+    z-index: -2;
+  }
+}
