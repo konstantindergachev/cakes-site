@@ -1,20 +1,10 @@
 export const changePage = () => {
-  const menuItem = document.querySelector('.menu');
-  switch (window.location.pathname) {
-    case '/':
-      menuItem.children[0].children[0].classList.add('active');
-      break;
-    case '/index.html':
-      menuItem.children[0].children[0].classList.add('active');
-      break;
-    case '/cakes.html':
-      menuItem.children[1].children[0].classList.add('active');
-      break;
-    case '/about.html':
-      menuItem.children[2].children[0].classList.add('active');
-      break;
-    case '/contacts.html':
-      menuItem.children[3].children[0].classList.add('active');
-      break;
+  const currentLocation = location.href;
+  const menuLinks = document.querySelectorAll('.menu__link');
+  const menuLength = menuLinks.length;
+  for (let i = 0; i < menuLength; i++) {
+    if (menuLinks[i].href === currentLocation) {
+      menuLinks[i].classList.add('active');
+    }
   }
 };
